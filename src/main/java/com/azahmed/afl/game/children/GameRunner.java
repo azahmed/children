@@ -10,27 +10,27 @@ import java.util.Scanner;
 public class GameRunner {
 
 	static int noOfChildren;
-	static int index = 10;
+	static int k = 10;
 	static boolean debugEnabled = false;
 	static int startFrom = 10;
+	static int idOfFirstChild = 0;
 
 	public static void main(final String[] args) throws Exception {
 		int daPercent = 0;
 		int childToRemove = 0;
-		int startingId = 0;
-		captureNoOfChildren();
-		final List<String> children = populateList(noOfChildren, startingId);
+		captureGameParameters();
+		final List<String> children = populateList(noOfChildren, idOfFirstChild);
 		// Check No Of players
 		boolean hasMinPlayers = hasMinimumNumberOfPlayers(children.size());
 		if (hasMinPlayers) {
-			displayGameParams(index, children);
+			displayGameParams(k, children);
 			// Game Loop
 			while (children.size() > 1) {
-				daPercent = (index + startFrom) % children.size();
+				daPercent = (k + startFrom) % children.size();
 				childToRemove = determineCorrectIndex(daPercent, children.size());
 				displayGameIteration(daPercent, childToRemove, children);
 				children.remove(childToRemove);
-				displayGameSnapshot(index, children);
+				displayGameSnapshot(k, children);
 				startFrom = childToRemove;
 			}
 
@@ -43,7 +43,7 @@ public class GameRunner {
 
 	private static void displayGameIteration(int daPercent, int childToRemove, final List<String> children) {
 		if (debugEnabled) {
-			System.out.println("index:" + index + ", size:" + children.size() + ", daPercent:" + daPercent
+			System.out.println("index:" + k + ", size:" + children.size() + ", daPercent:" + daPercent
 					+ ", startFrom:" + startFrom + ", childToRemove@:" + children.get(childToRemove));
 		} else {
 			System.out.println("Removing child:" + children.get(childToRemove));
@@ -51,17 +51,26 @@ public class GameRunner {
 	}
 
 	/**
-	 * Capture number of children from keyboard.
+	 * Capture the game params from keyboard.
 	 * 
 	 * @return
 	 */
-	private static void captureNoOfChildren() {
+	private static void captureGameParameters() {
 		Scanner scanner = null;
 		try {
-			System.out.println("Enter number of children n:");
 			scanner = new Scanner(System.in);
+			System.out.println("Enter number of children n:");
 			noOfChildren = scanner.nextInt();
 
+			System.out.println("Enter k:");
+			k = scanner.nextInt();
+
+			System.out.println("Sequential Id starts from:");
+			idOfFirstChild = scanner.nextInt();
+			
+			System.out.println("Index of the first child in the circle:");
+			startFrom = scanner.nextInt();
+			
 		} finally {
 			if (scanner != null) {
 				scanner.close();
