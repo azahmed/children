@@ -12,3 +12,6 @@ The keyboard inputs entered are integers (didn't put any validations around them
 # Improvements
 More data validations
 Use Log4j for logging
+
+# Running code locally
+Its a mvn project, So download and import :)
