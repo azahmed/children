@@ -9,8 +9,8 @@ import java.util.List;
 public class GameRunner {
 
 	public static void main(final String[] args) throws Exception {
-		final int listSize = 6;
-		final List<String> children = populateList(listSize);
+		final int noOfChildren = 6;
+		final List<String> children = populateList(noOfChildren);
 		final int index = 10;
 		int daPercent = 0;
 		int childToRemove = 0;
@@ -49,7 +49,7 @@ public class GameRunner {
 
 	private static List<String> populateList(final int listSize) {
 		final List<String> list = new ArrayList<String>();
-		final String[] daArray = new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" };
+		final String[] daArray = new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 		for (int i = 0; i < listSize; i++) {
 			list.add(daArray[i]);
 		}
