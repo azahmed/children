@@ -1,4 +1,4 @@
-package com.azahmed.afl.game.children.util;
+package com.azahmed.game.children.util;
 
 public class Utils {
 	public static final int MIN_PLAYERS_REQUIRED = 1;

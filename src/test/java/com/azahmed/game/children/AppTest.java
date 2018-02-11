@@ -1,4 +1,4 @@
-package com.azahmed.afl.game.children;
+package com.azahmed.game.children;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

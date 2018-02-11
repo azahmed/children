@@ -1,7 +1,7 @@
-package com.azahmed.afl.game.children;
+package com.azahmed.game.children;
 
-import static com.azahmed.afl.game.children.util.Utils.determineCorrectIndex;
-import static com.azahmed.afl.game.children.util.Utils.hasMinimumNumberOfPlayers;
+import static com.azahmed.game.children.util.Utils.determineCorrectIndex;
+import static com.azahmed.game.children.util.Utils.hasMinimumNumberOfPlayers;
 
 import java.util.ArrayList;
 import java.util.List;

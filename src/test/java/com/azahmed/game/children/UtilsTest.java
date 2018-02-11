@@ -1,9 +1,9 @@
-package com.azahmed.afl.game.children;
+package com.azahmed.game.children;
 
-import static com.azahmed.afl.game.children.util.Utils.MUST_HAVE_ONE_PLAYER;
-import static com.azahmed.afl.game.children.util.Utils.NEGATIVE_REMAINDER;
-import static com.azahmed.afl.game.children.util.Utils.determineCorrectIndex;
-import static com.azahmed.afl.game.children.util.Utils.hasMinimumNumberOfPlayers;
+import static com.azahmed.game.children.util.Utils.MUST_HAVE_ONE_PLAYER;
+import static com.azahmed.game.children.util.Utils.NEGATIVE_REMAINDER;
+import static com.azahmed.game.children.util.Utils.determineCorrectIndex;
+import static com.azahmed.game.children.util.Utils.hasMinimumNumberOfPlayers;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -11,7 +11,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import com.azahmed.afl.game.children.util.Utils;
+import com.azahmed.game.children.util.Utils;
 
 
 /**
