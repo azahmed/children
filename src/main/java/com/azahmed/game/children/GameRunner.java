@@ -11,6 +11,7 @@ public class GameRunner {
 
 	static int noOfChildren;
 	static int k = 10;
+	/* Switch to A, B, C for kids instead of ints. A little easier to debug! */
 	static boolean debugEnabled = false;
 	static int startFrom = 10;
 	static int idOfFirstChild = 0;
